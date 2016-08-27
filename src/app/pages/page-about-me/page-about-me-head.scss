@@ -1,0 +1,87 @@
+@import "../../../assets/scss/theme";
+
+.jumbotron {
+
+  background: no-repeat center right fixed url('/assets/img/background.jpg');
+
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/img/background.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/img/background.jpg', sizingMethod='scale');
+
+  margin-bottom: 0;
+  padding: 0;
+
+  .overlay {
+    background-color: $theme-main-color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    z-index: 2;
+  }
+
+  .container {
+    position: relative;
+    top: 28%;
+    z-index: 4;
+    text-align: center;
+
+    & > * {
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    h1 {
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      display: inline-block;
+    }
+
+    .lead {
+      font-size: 28px;
+    }
+  }
+
+  .scroll-down {
+    height: 80px;
+    width: 110px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    background-color: #222222;
+    text-align: center;
+    z-index: 6;
+
+    .glyphicon {
+      color: #FFFFFF;
+      font-size: 30px;
+      padding-right: 2px;
+      padding-top: 20px;
+
+      animation-name: wiggle;
+      animation-duration: 1.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+    }
+
+    &:hover {
+      .glyphicon {
+        padding-top: 25px;
+      }
+    }
+  }
+}

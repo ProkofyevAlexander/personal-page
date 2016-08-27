@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 
+import { PageAboutMeIndexComponent } from './pages/page-about-me/page-about-me-index.component';
+
 @Component({
     selector: 'pa-my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    template: '<pa-page-about-me-index></pa-page-about-me-index>',
+    directives: [PageAboutMeIndexComponent]
 })
 export class AppComponent {
 }

@@ -23,11 +23,18 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(css|scss)$/,
+                test: /\.scss$/,
+                loaders: [
+                    'raw',
+                    'sass',
+                    'postcss'
+                ]
+            },
+            {
+                test: /\.css$/,
                 loaders: [
                     'style',
                     'css',
-                    'sass',
                     'postcss'
                 ]
             },
@@ -45,7 +52,11 @@ module.exports = {
                 ]
             },
             {
-                test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+                test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+                loader: 'file'
+            },
+            {
+                test   : /\.(png|gif|jpe?g)$/,
                 loader : 'file'
             }
         ]

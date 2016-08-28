@@ -1,9 +1,17 @@
-import { Component } from '@angular/core';
+import {
+    Component,
+    AfterViewInit,
+    ViewChild,
+    ElementRef
+} from '@angular/core';
+
+declare var $: JQueryStatic;
 
 @Component({
     selector: 'pa-page-about-me-head',
     template: `
-<div class="jumbotron"
+<div #jumbotron
+    class="jumbotron"
     data-src="/img/main.gif"
     data-position="center center">
     <div class="container">
@@ -17,5 +25,24 @@ import { Component } from '@angular/core';
 </div>`,
     styles: [require('./page-about-me-head.scss')]
 })
-export class PageAboutMeHeadComponent {
+export class PageAboutMeHeadComponent implements AfterViewInit {
+
+    @ViewChild('jumbotron') jumbotronRef: ElementRef;
+
+    ngAfterViewInit() {
+        const $jumbotron = $(this.jumbotronRef.nativeElement);
+        const $window = $(window);
+
+        const setJumbotronHeight = () => {
+            $jumbotron.css({
+                height: $window.height() + 'px'
+            });
+        };
+
+        setJumbotronHeight();
+
+        $window.on('resize', function () {
+            setJumbotronHeight();
+        });
+    }
 }

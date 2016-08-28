@@ -67,6 +67,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: conf.path.src('index.html'),
             inject: true
+        }),
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
         })
     ],
     postcss: () => [autoprefixer],

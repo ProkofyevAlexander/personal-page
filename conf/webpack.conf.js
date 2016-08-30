@@ -23,7 +23,13 @@ module.exports = {
                 ]
             },
             {
-                test: /\.scss$/,
+                test: /.pug/,
+                loaders: [
+                    'pug-html'
+                ]
+            },
+            {
+                test: /\.component\.(css|scss)$/,
                 loaders: [
                     'raw',
                     'sass',
@@ -31,10 +37,11 @@ module.exports = {
                 ]
             },
             {
-                test: /\.css$/,
+                test: /^((?!\.component).)*\.(css|scss)$/,
                 loaders: [
                     'style',
                     'css',
+                    'sass',
                     'postcss'
                 ]
             },

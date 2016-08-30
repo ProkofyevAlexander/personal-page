@@ -2,20 +2,13 @@
 
 .jumbotron {
 
-  background: no-repeat center right fixed url('/assets/img/background.jpg');
+  background: no-repeat center right fixed url("/assets/img/background.jpg");
 
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
   background-size: 100%;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/img/background.jpg', sizingMethod='scale')";
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/img/background.jpg', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="./assets/img/background.jpg", sizingMethod="scale");
 
   margin-bottom: 0;
   padding: 0;
@@ -77,11 +70,59 @@
       animation-iteration-count: infinite;
       animation-direction: normal;
     }
+  }
+}
 
-    &:hover {
-      .glyphicon {
-        padding-top: 25px;
-      }
+@media (max-width: 767px) {
+  .jumbotron {
+    &:before {
+      bottom: 100px;
+      left: 20px;
+      right: 20px;
+      top: 20px;
     }
+
+    .container {
+      top: 20%;
+      padding-top: 0;
+    }
+
+    .scroll-down {
+      width: 100%;
+      right: 0;
+    }
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 767px) {
+  .jumbotron {
+    -webkit-background-size: auto 150%;
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 767px) {
+
+  .jumbotron {
+    -webkit-background-size: 150% auto;
+    background-attachment: scroll;
+
+    .lead {
+      display: none;
+    }
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    padding-top: 20px;
+  }
+
+  50% {
+    padding-top: 28px;
+  }
+
+  100% {
+    padding-top: 20px;
   }
 }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { PageAboutMeIndexComponent } from './pages/page-about-me/page-about-me-index.component';
+import { PageAboutMeComponent } from './pages/page-about-me/page-about-me.component';
 
 @Component({
     selector: 'pa-my-app',
-    template: '<pa-page-about-me-index></pa-page-about-me-index>',
-    directives: [PageAboutMeIndexComponent]
+    template: '<pa-page-about-me></pa-page-about-me>',
+    directives: [PageAboutMeComponent]
 })
 export class AppComponent {
 }

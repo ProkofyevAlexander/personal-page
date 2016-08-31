@@ -1,13 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { IPageAboutMeContentItem } from './page-about-me__content-item.interface';
-import { IPagePart } from '../page-about-me.types';
+import { PageAboutMeContentItemBaseComponent } from './page-about-me__content-item-base.component';
 
 @Component({
     selector: 'pa-page-about-me-content-item-abilities',
-    template: 'Abilities {{ pagePartIndex }}'
+    template: require('./page-about-me__content-item-abilities.component.pug'),
+    styles: [
+        require('./page-about-me__content-item.component.scss'),
+        require('./page-about-me__content-item-abilities.component.scss')
+    ]
 })
-export class PageAboutMeContentItemAbilitiesComponent implements IPageAboutMeContentItem {
-    @Input() pagePart: IPagePart;
-    @Input() pagePartIndex: number;
+export class PageAboutMeContentItemAbilitiesComponent extends PageAboutMeContentItemBaseComponent {
 }

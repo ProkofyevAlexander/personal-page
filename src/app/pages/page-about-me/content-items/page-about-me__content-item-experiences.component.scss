@@ -1,0 +1,24 @@
+@import "../../../../assets/scss/theme";
+
+.experience {
+  margin-bottom: 20px;
+
+  p > strong {
+    display: block;
+    padding-top: 8px;
+    margin-bottom: 10px;
+  }
+
+  .experience-details {
+    display: block;
+    margin-top: 6px;
+
+    * {
+      color: $theme-main-color;
+    }
+
+    .seperator {
+      color: #BCBCBC;
+    }
+  }
+}

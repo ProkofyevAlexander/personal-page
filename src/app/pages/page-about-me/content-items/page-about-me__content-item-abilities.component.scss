@@ -1,0 +1,49 @@
+@import "../../../../assets/scss/theme";
+
+ul > li {
+  min-height: 30px;
+  padding: 3px 0;
+
+  &:hover {
+    background: #F2F2F2;
+  }
+
+  .ability-title {
+    display: inline-block;
+    width: 60%;
+  }
+
+  .ability-score {
+    float: right;
+
+    .glyphicon {
+      color: #DFE0E0;
+      font-size: 14px;
+
+      transition: all 0.3s;
+
+      &.filled {
+        color: $theme-main-color;
+      }
+    }
+  }
+
+  &:hover .ability-score .glyphicon {
+    margin-left: 2px;
+  }
+}
+
+.btn-primary {
+  background: $theme-main-color;
+  border-color: $theme-button-bg_active;
+
+  &:hover {
+    background: $theme-button-bg_hover;
+    border-color: $theme-button-bg_hover;
+  }
+  &.focus:active,
+  &:active {
+    background: $theme-button-bg_active;
+    border-color: $theme-button-bg_active;
+  }
+}

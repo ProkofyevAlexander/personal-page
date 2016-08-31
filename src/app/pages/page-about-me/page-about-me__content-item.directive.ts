@@ -3,16 +3,18 @@ import {
     Input,
     ViewContainerRef,
     ComponentFactoryResolver,
-    ComponentRef
+    ComponentRef, ComponentFactory
 } from '@angular/core';
 
-import { IPagePart } from './page-about-me.types';
+import { IPagePart, PagePartType } from './page-about-me.types';
+
 import {
-    PageAboutMeContentItemProfileComponent
-} from './content-items/page-about-me__content-item-profile.component';
-import {
-    IPageAboutMeContentItem
-} from './content-items/page-about-me__content-item.interface';
+    IPageAboutMeContentItem,
+    PageAboutMeContentItemProfileComponent,
+    PageAboutMeContentItemExperiencesComponent,
+    PageAboutMeContentItemAbilitiesComponent,
+    PageAboutMeContentItemContactComponent
+} from './content-items/index';
 
 @Directive({
     selector: '[paPageAboutMeContentItem]'
@@ -43,7 +45,33 @@ export class PageAboutMeContentItemDirective {
 
             this.loaded = true;
 
-            const componentFactory = this.resolver.resolveComponentFactory(PageAboutMeContentItemProfileComponent);
+            let componentFactory: ComponentFactory<IPageAboutMeContentItem>;
+
+            switch (this._pagePart.type) {
+
+                case PagePartType.Profile:
+                    componentFactory =
+                        this.resolver.resolveComponentFactory(PageAboutMeContentItemProfileComponent);
+                    break;
+
+                case PagePartType.Experiences:
+                    componentFactory =
+                        this.resolver.resolveComponentFactory(PageAboutMeContentItemExperiencesComponent);
+                    break;
+
+                case PagePartType.Abilities:
+                    componentFactory =
+                        this.resolver.resolveComponentFactory(PageAboutMeContentItemAbilitiesComponent);
+                    break;
+
+                case PagePartType.Contact:
+                    componentFactory =
+                        this.resolver.resolveComponentFactory(PageAboutMeContentItemContactComponent);
+                    break;
+
+                default:
+                    return false;
+            }
 
             const componentRef: ComponentRef<IPageAboutMeContentItem> =
                 this.viewContainerRef.createComponent(componentFactory);

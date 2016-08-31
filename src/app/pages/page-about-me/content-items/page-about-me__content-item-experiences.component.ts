@@ -4,10 +4,10 @@ import { IPageAboutMeContentItem } from './page-about-me__content-item.interface
 import { IPagePart } from '../page-about-me.types';
 
 @Component({
-    selector: 'pa-page-about-me-content-item-profile',
-    template: 'Profile {{ pagePartIndex }}'
+    selector: 'pa-page-about-me-content-item-experiences',
+    template: 'Experiences {{ pagePartIndex }}'
 })
-export class PageAboutMeContentItemProfileComponent implements IPageAboutMeContentItem {
+export class PageAboutMeContentItemExperiencesComponent implements IPageAboutMeContentItem {
     @Input() pagePart: IPagePart;
     @Input() pagePartIndex: number;
 }

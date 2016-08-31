@@ -1,13 +1,10 @@
-import { NgModule, Type } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PageAboutMeService } from './pages/page-about-me/page-about-me.service';
-import { PageAboutMeContentItemProfileComponent } from './pages/page-about-me/content-items/page-about-me__content-item-profile.component';
 
-const entryComponents: Type[] = [
-    PageAboutMeContentItemProfileComponent
-];
+import { PAGES_ENTRY_COMPONENTS } from './pages/index';
 
 @NgModule({
     providers: [
@@ -16,10 +13,10 @@ const entryComponents: Type[] = [
     imports: [BrowserModule],
     declarations: [
         AppComponent,
-        entryComponents
+        PAGES_ENTRY_COMPONENTS
     ],
     bootstrap: [AppComponent],
-    entryComponents: entryComponents
+    entryComponents: PAGES_ENTRY_COMPONENTS
 })
 export class AppModule {
 }

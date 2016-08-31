@@ -1,7 +1,6 @@
 div&attributes({
-    '*ngFor': 'let pagePart of pageParts; let pagePartIndex = index'
+    '*ngFor': 'let pagePart of pageParts; let pagePartIndex = index',
+    'paPageAboutMeContentItem': '',
+    '[pagePart]': 'pagePart',
+    '[pagePartIndex]': 'pagePartIndex'
 })
-    pa-page-about-me-content-item&attributes({
-        '[pagePart]': 'pagePart',
-        '[pagePartIndex]': 'pagePartIndex'
-    })

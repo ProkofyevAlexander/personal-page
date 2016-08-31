@@ -1,23 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { PageAboutMeService } from './page-about-me.service';
 import { IPagePart } from './page-about-me.types';
-import { PageAboutMeContentItemComponent } from './page-about-me__content-item.component';
+import { PageAboutMeContentItemDirective } from './page-about-me__content-item.directive';
 
 @Component({
     selector: 'pa-page-about-me-content',
     template: require('./page-about-me__content.component.pug'),
     styles: [require('./page-about-me__content.component.scss')],
-    directives: [PageAboutMeContentItemComponent]
+    directives: [PageAboutMeContentItemDirective]
 })
-export class PageAboutMeContentComponent implements OnInit {
-
-    pageParts: IPagePart[] = [];
+export class PageAboutMeContentComponent {
 
     constructor(private pageAboutMeService: PageAboutMeService) {
     }
 
-    ngOnInit() {
-        this.pageParts = this.pageAboutMeService.getPageParts();
+    get pageParts(): IPagePart[] {
+        return this.pageAboutMeService.getPageParts();
     }
+
 }

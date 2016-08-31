@@ -5,8 +5,11 @@ import { IPagePart, PagePartType } from './page-about-me.types';
 @Injectable()
 export class PageAboutMeService {
 
-    getPageParts(): IPagePart[] {
-        return [
+    pageParts: IPagePart[] = [];
+
+    constructor() {
+
+        this.pageParts = [
             {
                 name: 'Profile',
                 type: PagePartType.Profile
@@ -24,5 +27,9 @@ export class PageAboutMeService {
                 type: PagePartType.Contact
             }
         ];
+    }
+
+    getPageParts(): IPagePart[] {
+        return this.pageParts;
     }
 }

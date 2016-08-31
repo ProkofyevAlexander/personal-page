@@ -1,8 +1,8 @@
 import {
-    Component,
+    Directive,
     Input,
     ViewContainerRef,
-    ComponentResolver,
+    ComponentFactoryResolver,
     ComponentRef
 } from '@angular/core';
 
@@ -14,11 +14,10 @@ import {
     IPageAboutMeContentItem
 } from './content-items/page-about-me__content-item.interface';
 
-@Component({
-    selector: 'pa-page-about-me-content-item',
-    template: ''
+@Directive({
+    selector: '[paPageAboutMeContentItem]'
 })
-export class PageAboutMeContentItemComponent {
+export class PageAboutMeContentItemDirective {
 
     @Input() set pagePart(pagePart: IPagePart) {
         this._pagePart = pagePart;
@@ -35,7 +34,7 @@ export class PageAboutMeContentItemComponent {
     private loaded: boolean = false;
 
     constructor(private viewContainerRef: ViewContainerRef,
-                private componentResolver: ComponentResolver) {
+                private resolver: ComponentFactoryResolver) {
     }
 
     private loadItem() {
@@ -44,14 +43,14 @@ export class PageAboutMeContentItemComponent {
 
             this.loaded = true;
 
-            this.componentResolver.resolveComponent(PageAboutMeContentItemProfileComponent)
-                .then(componentFactory => {
-                    const componentRef: ComponentRef<IPageAboutMeContentItem> =
-                        this.viewContainerRef.createComponent(componentFactory);
-                    const component = componentRef.instance;
-                    component.pagePart = this._pagePart;
-                    component.pagePartIndex = this._pagePartIndex;
-                });
+            const componentFactory = this.resolver.resolveComponentFactory(PageAboutMeContentItemProfileComponent);
+
+            const componentRef: ComponentRef<IPageAboutMeContentItem> =
+                this.viewContainerRef.createComponent(componentFactory);
+
+            const component = componentRef.instance;
+            component.pagePart = this._pagePart;
+            component.pagePartIndex = this._pagePartIndex;
         }
     }
 

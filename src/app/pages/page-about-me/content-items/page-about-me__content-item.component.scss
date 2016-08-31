@@ -1,0 +1,35 @@
+@import "../../../../assets/scss/theme";
+
+p.lead {
+    text-align: center;
+    color: #727878;
+
+    a {
+        color: $theme-button-text-color;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+hr {
+    margin: 40px 0;
+    border-color: #727878;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.background-white {
+    background: #FFFFFF;
+}
+
+.background-gray {
+    background: #434242;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 40px 180px;
+}

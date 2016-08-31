@@ -1,53 +1,48 @@
 @import "../../../assets/scss/theme";
 
 .navbar {
-
   border: 0;
-  background-color: $theme-navbar-bg;
+  background: $theme-navbar-bg;
   position: absolute;
   top: 100%;
   right: 5%;
   width: 110px;
   z-index: 999;
+}
 
-  .navbar-collapse {
-    padding: 0;
-    max-height: none;
-  }
+.navbar-collapse {
+  padding: 0;
+  max-height: none;
+}
 
-  .nav {
-    > li {
+.nav {
+  > li {
+    display: block;
+    float: none;
+    height: 80px;
+
+    a {
       display: block;
-      float: none;
       height: 80px;
+      text-align: center;
+      padding-top: 30px;
+      font-weight: 600;
+      color: $theme-button-text-color;
 
-      a {
-        display: block;
-        height: 80px;
-        text-align: center;
-        padding-top: 30px;
-        font-weight: 600;
-        color: $theme-button-text-color;
-
-        &:hover,
-        &:focus {
-          color: #999999;
-        }
+      &:hover,
+      &:focus {
+        color: #999999;
       }
     }
-  }
-
-  .navbar-nav {
-    float: none;
   }
 }
 
 .navbar-nav {
-  margin: 0;
-}
 
-.navbar-default {
-  .navbar-nav > .active > {
+  margin: 0;
+  float: none;
+
+  > .active > {
     a,
     a:hover,
     a:focus {
@@ -55,13 +50,13 @@
       color: $theme-button-text-color;
     }
   }
+}
 
-  .navbar-toggle {
-    &:hover,
-    &:focus {
-      .icon-bar {
-        background: $theme-navbar-bg;
-      }
+.navbar-toggle {
+  &:hover,
+  &:focus {
+    .icon-bar {
+      background: $theme-navbar-bg;
     }
   }
 }

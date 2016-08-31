@@ -5,9 +5,9 @@ import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-theme.min.css';
+import './index.scss';
 
 import { AppModule } from './app/app.module';
 

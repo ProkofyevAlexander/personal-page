@@ -9,8 +9,8 @@ declare var $: JQueryStatic;
 
 @Component({
     selector: 'pa-page-about-me-head',
-    template: require('./page-about-me__head.component.pug'),
-    styles: [ require('./page-about-me__head.component.scss') ]
+    template: require('./page-about-me__head.pug'),
+    styles: [ require('./page-about-me__head.scss') ]
 })
 export class PageAboutMeHeadComponent implements AfterViewInit {
 

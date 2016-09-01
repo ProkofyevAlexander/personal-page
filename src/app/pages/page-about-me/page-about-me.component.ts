@@ -6,8 +6,8 @@ import { PageAboutMeContentComponent } from './page-about-me__content.component'
 
 @Component({
     selector: 'pa-page-about-me',
-    template: require('./page-about-me.component.pug'),
-    styles: [require('./page-about-me.component.scss')],
+    template: require('./page-about-me.pug'),
+    styles: [require('./page-about-me.scss')],
     directives: [
         PageAboutMeHeadComponent,
         PageAboutMeNavigationComponent,

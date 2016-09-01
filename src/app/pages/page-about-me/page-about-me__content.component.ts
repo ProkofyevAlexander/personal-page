@@ -6,8 +6,8 @@ import { PageAboutMeContentItemDirective } from './page-about-me__content-item.d
 
 @Component({
     selector: 'pa-page-about-me-content',
-    template: require('./page-about-me__content.component.pug'),
-    styles: [require('./page-about-me__content.component.scss')],
+    template: require('./page-about-me__content.pug'),
+    styles: [require('./page-about-me__content.scss')],
     directives: [PageAboutMeContentItemDirective]
 })
 export class PageAboutMeContentComponent {

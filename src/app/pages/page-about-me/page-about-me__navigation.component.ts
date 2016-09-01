@@ -9,8 +9,8 @@ declare var $: JQueryStatic;
 
 @Component({
     selector: 'pa-page-about-me-navigation',
-    template: require('./page-about-me__navigation.component.pug'),
-    styles: [ require('./page-about-me__navigation.component.scss') ]
+    template: require('./page-about-me__navigation.pug'),
+    styles: [ require('./page-about-me__navigation.scss') ]
 })
 export class PageAboutMeNavigationComponent {
 

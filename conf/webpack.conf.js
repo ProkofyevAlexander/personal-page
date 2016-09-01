@@ -23,7 +23,7 @@ module.exports = {
                 ]
             },
             {
-                test: /.pug/,
+                test: /.pug$/,
                 loaders: [
                     'pug-html'
                 ]

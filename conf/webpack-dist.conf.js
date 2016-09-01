@@ -16,8 +16,22 @@ module.exports = {
                     'json'
                 ]
             },
+             {
+                test: /.pug$/,
+                loaders: [
+                    'pug-html'
+                ]
+            },
             {
-                test: /\.(css|scss)$/,
+                test: /\.component\.(css|scss)$/,
+                loaders: [
+                    'raw',
+                    'sass',
+                    'postcss'
+                ]
+            },
+            {
+                test: /^((?!\.component).)*\.(css|scss)$/,
                 loaders: ExtractTextPlugin.extract({
                     fallbackLoader: 'style',
                     loader: 'css?minimize!sass!postcss'
@@ -39,6 +53,10 @@ module.exports = {
             {
                 test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
                 loader : 'file'
+            },
+            {
+                test   : /\.(png|gif|jpe?g)$/,
+                loader : 'file'
             }
         ]
     },
@@ -49,11 +67,23 @@ module.exports = {
             template: conf.path.src('index.html'),
             inject: true
         }),
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
+        }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"'
         }),
         new webpack.optimize.UglifyJsPlugin({
-            compress: {unused: true, dead_code: true} // eslint-disable-line camelcase
+            compress: {
+                unused: true,
+                dead_code: true
+            }, // eslint-disable-line camelcase
+            mangle: {
+                except: ['$', 'exports', 'require'],
+                keep_fnames: true
+            }
         }),
         new ExtractTextPlugin('index-[contenthash].css')
     ],

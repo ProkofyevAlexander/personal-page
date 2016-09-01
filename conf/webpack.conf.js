@@ -29,7 +29,10 @@ module.exports = {
                 ]
             },
             {
-                test: /\.component\.(css|scss)$/,
+                test: /\.(css|scss)$/,
+                include: [
+                    path.resolve(__dirname, "../src/app")
+                ],
                 loaders: [
                     'raw',
                     'sass',
@@ -37,7 +40,10 @@ module.exports = {
                 ]
             },
             {
-                test: /^((?!\.component).)*\.(css|scss)$/,
+                test: /\.(css|scss)$/,
+                exclude: [
+                    path.resolve(__dirname, "../src/app")
+                ],
                 loaders: [
                     'style',
                     'css',

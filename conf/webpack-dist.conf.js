@@ -23,7 +23,10 @@ module.exports = {
                 ]
             },
             {
-                test: /\.component\.(css|scss)$/,
+                test: /\.(css|scss)$/,
+                include: [
+                    path.resolve(__dirname, "../src/app")
+                ],
                 loaders: [
                     'raw',
                     'sass',
@@ -31,7 +34,10 @@ module.exports = {
                 ]
             },
             {
-                test: /^((?!\.component).)*\.(css|scss)$/,
+                test: /\.(css|scss)$/,
+                exclude: [
+                    path.resolve(__dirname, "../src/app")
+                ],
                 loaders: ExtractTextPlugin.extract({
                     fallbackLoader: 'style',
                     loader: 'css?minimize!sass!postcss'
@@ -81,7 +87,7 @@ module.exports = {
                 dead_code: true
             }, // eslint-disable-line camelcase
             mangle: {
-                except: ['$', 'exports', 'require'],
+                //except: ['$super', '$', 'exports', 'require'],
                 keep_fnames: true
             }
         }),

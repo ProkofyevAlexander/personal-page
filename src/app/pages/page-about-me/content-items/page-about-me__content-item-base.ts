@@ -3,7 +3,7 @@ import { Input } from '@angular/core';
 import { IPageAboutMeContentItem } from './page-about-me__content-item.interface';
 import { IPagePart } from '../page-about-me.types';
 
-export class PageAboutMeContentItemBaseComponent implements IPageAboutMeContentItem {
+export class PageAboutMeContentItemBase implements IPageAboutMeContentItem {
 
     @Input() pagePart: IPagePart;
     @Input() pagePartIndex: number;

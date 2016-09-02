@@ -23,6 +23,26 @@ export interface IPagePartProfileData {
     };
 }
 
+export interface IPagePartExperiencesData {
+    header: string;
+    educationsHeader: string;
+    educations: {
+        university: string;
+        period: string
+        faculty: string;
+        qualification: string;
+        location: string;
+    }[];
+    careersHeader: string;
+    careers: {
+        company: string;
+        period: string;
+        position: string;
+        siteUrl?: string;
+        role: string;
+    }[];
+}
+
 export interface IPageParDataListItem {
     title: string;
     score: number;

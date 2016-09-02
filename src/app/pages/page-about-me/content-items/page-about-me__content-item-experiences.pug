@@ -3,73 +3,55 @@ div&attributes({
 })
     div(id="experiences" class="container")
 
-        h2 Experiences
+        h2 {{ data.header }}
 
         hr
 
-        h3 Educations
+        h3 {{ data.educationsHeader }}
 
         div(class="experiences")
 
-            div(class="experience row")
+            div(class="experience row")&attributes({
+                '*ngFor': 'let education of data.educations'
+            })
                 div(class="col-md-4")
-                    h4 Vladimir State University
-                    p(class="experience-period") September 2003 - June 2009
+                    h4 {{ education.university }}
+                    p(class="experience-period") {{ education.period }}
 
                 div(class="col-md-8")
                     p
-                        strong Information Technology
+                        strong {{ education.faculty }}
                         span(class="hidden-phone")
-                            | Master of Engineering (M.Eng.)
+                            | {{ education.qualification }}
 
                         span(class="experience-details")
                             span(class="location")
                                 span(class="glyphicon glyphicon-map-marker")
-                                | Internally
+                                | {{ education.location }}
 
         hr
 
-        h3 Careers
+        h3 {{ data.careersHeader }}
 
         div(class="experiences")
 
-            div(class="experience row")
+            div(class="experience row")&attributes({
+                '*ngFor': 'let career of data.careers'
+            })
                 div(class="col-md-4")
-                    h4 iManageRent - Property management system
-                    p(class="experience-period") March 2011 – April 2015
+                    h4 {{ career.company }}
+                    p(class="experience-period") {{ career.period }}
 
                 div(class="col-md-8")
                     p
-                        strong Web Developer
+                        strong {{ career.position }}
 
                         span(class="experience-details")
-                            a(href="https://imanagerent.com/" target="_blank") https://imanagerent.com/
-                            br
-                            | Web development (PHP, JavaScript, MySQL, jQuery, Silex, Twig, third-party APIs)
-
-            div(class="experience row")
-                div(class="col-md-4")
-                    h4 The Institute of Informatics Problems of The Russian Academy of Sciences
-                    p(class="experience-period") August 2009 – June 2012
-
-                div(class="col-md-8")
-                    p
-                        strong Experimental engineer
-
-                        span(class="experience-details")
-                            | Hardware development (VHDL).
-                            | Web development (PHP, JavaScript, HTML, CSS, XML, XSLT)
-
-            div(class="experience row")
-                div(class="col-md-4")
-                    h4 Gnosis Project System
-                    p(class="experience-period") June 2007 – September 2008
-
-                div(class="col-md-8")
-                    p
-                        strong Web Developer
-
-                        span(class="experience-details")
-                            | Project System support and functionality extension
-                            | (Perl, MySQL, JavaScript, XML, HTML, CSS, DOM)
-
+                            a(target="_blank")&attributes({
+                                '*ngIf': 'career.siteUrl',
+                                '[attr.href]': 'career.siteUrl'
+                            }) {{ career.siteUrl }}
+                            br&attributes({
+                                '*ngIf': 'career.siteUrl'
+                            })
+                            | {{ career.role }}

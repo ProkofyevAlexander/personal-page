@@ -5,6 +5,24 @@ export enum PagePartType {
     Contact
 }
 
+export interface IPagePartProfileData {
+    header: string;
+    lead: string;
+    aboutMe: {
+        header: string;
+        paragraphs: string[]
+    };
+    detail: {
+        header: string;
+        fullNameLabel: string;
+        fullName: string;
+        ageLabel: string;
+        age: string;
+        locationLabel: string;
+        location: string;
+    };
+}
+
 export interface IPageParDataListItem {
     title: string;
     score: number;

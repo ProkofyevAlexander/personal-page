@@ -3,10 +3,11 @@ import { Injectable } from '@angular/core';
 import {
     IPagePart,
     PagePartType,
-    IPagePartAbilitiesData
+    IPagePartAbilitiesData, IPagePartProfileData
 } from './page-about-me.types';
 
 import { pagePartAbilitiesData } from './page-data/page-about-me-page-part-abilities-data';
+import { pagePartProfileData } from './page-data/page-about-me-page-part-profile-data';
 
 declare type DataType = IPagePartAbilitiesData|Object;
 
@@ -17,6 +18,12 @@ export class PageAboutMeService {
 
     constructor() {
 
+        const pagePartProfile: IPagePart<IPagePartProfileData> = {
+            name: 'Profile',
+            type: PagePartType.Profile,
+            data: pagePartProfileData
+        };
+
         const pagePartAbilities: IPagePart<IPagePartAbilitiesData> = {
             name: 'Abilities',
             type: PagePartType.Abilities,
@@ -24,10 +31,7 @@ export class PageAboutMeService {
         };
 
         this.pageParts = [
-            {
-                name: 'Profile',
-                type: PagePartType.Profile
-            },
+            pagePartProfile,
             {
                 name: 'Experiences',
                 type: PagePartType.Experiences

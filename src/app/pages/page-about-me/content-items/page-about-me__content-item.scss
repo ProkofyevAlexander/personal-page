@@ -21,6 +21,12 @@ hr {
     filter: alpha(opacity=20);
 }
 
+ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 .background-white {
     background: #FFFFFF;
 }

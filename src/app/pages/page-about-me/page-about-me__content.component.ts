@@ -15,7 +15,7 @@ export class PageAboutMeContentComponent {
     constructor(private pageAboutMeService: PageAboutMeService) {
     }
 
-    get pageParts(): IPagePart[] {
+    get pageParts(): IPagePart<Object>[] {
         return this.pageAboutMeService.getPageParts();
     }
 

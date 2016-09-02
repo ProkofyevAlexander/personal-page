@@ -10,5 +10,5 @@ import { PageAboutMeContentItemBase } from './page-about-me__content-item-base';
         require('./page-about-me__content-item-profile.scss')
     ]
 })
-export class PageAboutMeContentItemProfileComponent extends PageAboutMeContentItemBase {
+export class PageAboutMeContentItemProfileComponent extends PageAboutMeContentItemBase<Object> {
 }

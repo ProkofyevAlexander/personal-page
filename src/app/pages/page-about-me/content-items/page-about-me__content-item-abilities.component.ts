@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { PageAboutMeContentItemBase } from './page-about-me__content-item-base';
+import { IPagePartAbilitiesData } from '../page-about-me.types';
 
 @Component({
     selector: 'pa-page-about-me-content-item-abilities',
@@ -10,5 +11,5 @@ import { PageAboutMeContentItemBase } from './page-about-me__content-item-base';
         require('./page-about-me__content-item-abilities.scss')
     ]
 })
-export class PageAboutMeContentItemAbilitiesComponent extends PageAboutMeContentItemBase {
+export class PageAboutMeContentItemAbilitiesComponent extends PageAboutMeContentItemBase<IPagePartAbilitiesData> {
 }

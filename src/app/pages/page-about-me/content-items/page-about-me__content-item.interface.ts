@@ -1,6 +1,6 @@
 import { IPagePart } from '../page-about-me.types';
 
-export interface IPageAboutMeContentItem {
-    pagePart: IPagePart;
+export interface IPageAboutMeContentItem<DataType> {
+    pagePart: IPagePart<DataType>;
     pagePartIndex: number;
 }

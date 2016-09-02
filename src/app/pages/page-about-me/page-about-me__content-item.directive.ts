@@ -21,7 +21,7 @@ import {
 })
 export class PageAboutMeContentItemDirective {
 
-    @Input() set pagePart(pagePart: IPagePart) {
+    @Input() set pagePart(pagePart: IPagePart<Object>) {
         this._pagePart = pagePart;
         this.loadItem();
     }
@@ -31,7 +31,7 @@ export class PageAboutMeContentItemDirective {
         this.loadItem();
     }
 
-    private _pagePart: IPagePart;
+    private _pagePart: IPagePart<Object>;
     private _pagePartIndex: number;
     private loaded: boolean = false;
 
@@ -45,7 +45,7 @@ export class PageAboutMeContentItemDirective {
 
             this.loaded = true;
 
-            let componentFactory: ComponentFactory<IPageAboutMeContentItem>;
+            let componentFactory: ComponentFactory<IPageAboutMeContentItem<Object>>;
 
             switch (this._pagePart.type) {
 
@@ -73,7 +73,7 @@ export class PageAboutMeContentItemDirective {
                     return false;
             }
 
-            const componentRef: ComponentRef<IPageAboutMeContentItem> =
+            const componentRef: ComponentRef<IPageAboutMeContentItem<Object>> =
                 this.viewContainerRef.createComponent(componentFactory);
 
             const component = componentRef.instance;

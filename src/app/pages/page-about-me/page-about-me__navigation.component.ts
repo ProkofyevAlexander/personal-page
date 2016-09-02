@@ -17,7 +17,7 @@ export class PageAboutMeNavigationComponent {
     constructor(private pageAboutMeService: PageAboutMeService) {
     }
 
-    get pageParts(): IPagePart[] {
+    get pageParts(): IPagePart<Object>[] {
         return this.pageAboutMeService.getPageParts();
     }
 }

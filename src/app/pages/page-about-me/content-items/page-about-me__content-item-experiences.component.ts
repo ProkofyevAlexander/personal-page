@@ -10,5 +10,5 @@ import { PageAboutMeContentItemBase } from './page-about-me__content-item-base';
         require('./page-about-me__content-item-experiences.scss')
     ]
 })
-export class PageAboutMeContentItemExperiencesComponent extends PageAboutMeContentItemBase {
+export class PageAboutMeContentItemExperiencesComponent extends PageAboutMeContentItemBase<Object> {
 }

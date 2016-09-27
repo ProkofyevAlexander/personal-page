@@ -7,6 +7,8 @@
   top: 100%;
   right: 5%;
   width: 110px;
+  box-shadow: none;
+  border-radius: 0;
   z-index: 999;
 }
 
@@ -57,6 +59,26 @@
   &:focus {
     .icon-bar {
       background: $theme-navbar-bg;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .navbar {
+    left: 0;
+    width: 100%;
+
+    .nav > li {
+      height: 60px;
+
+      a {
+        height: 60px;
+        text-align: center;
+        padding-top: 20px;
+        font-weight: 600;
+        color: $theme-button-text-color;
+      }
     }
   }
 }

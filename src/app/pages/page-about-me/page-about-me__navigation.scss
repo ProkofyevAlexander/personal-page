@@ -10,6 +10,11 @@
   box-shadow: none;
   border-radius: 0;
   z-index: 999;
+
+  &.fixed {
+    position: fixed;
+    top: 60px;
+  }
 }
 
 .navbar-collapse {
@@ -68,6 +73,10 @@
   .navbar {
     left: 0;
     width: 100%;
+
+    &.fixed {
+      top: 0;
+    }
 
     .nav > li {
       height: 60px;

@@ -18,5 +18,5 @@ nav(class="navbar navbar-default" id="navbar" role="navigation")&attributes({
     })
         ul(class="nav navbar-nav")
             li&attributes({"*ngFor":"let pagePart of pageParts"})
-                a([attr.href]="'#' + pagePart.name")
+                a(href="{{ '#' + pagePart.name }}")
                     |{{ pagePart.name }}

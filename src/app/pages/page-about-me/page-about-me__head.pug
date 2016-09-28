@@ -5,5 +5,7 @@ div(id="top" class="jumbotron")&attributes({'#jumbotron':''})
 
     div(class="overlay")
 
-    a(href="#profile" class="scroll-down")
+    a(href="#" class="scroll-down")&attributes({
+        '(click)': 'scrollToNav($event)'
+    })
         span(class="glyphicon glyphicon-chevron-down")

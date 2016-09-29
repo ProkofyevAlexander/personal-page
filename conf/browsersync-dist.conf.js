@@ -7,6 +7,17 @@ module.exports = function () {
         conf.paths.dist
       ]
     },
-    open: false
+    port: 80,
+    watchOptions: {
+      ignoreInitial: true,
+      ignored: '*'
+    },
+    ui: false,
+    ghostMode: false,
+    open: false,
+    reloadOnRestart: false,
+    notify: false,
+    codeSync: false
   };
 };
+

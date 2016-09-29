@@ -29,6 +29,10 @@ export class PageAboutMeNavigationComponent implements AfterViewInit {
             this.navBarIsFixed = window.scrollY > window.innerHeight;
         });
 
+        $(window).on('activate.bs.scrollspy', function (e) {
+            history.replaceState(null, null, $('a[href^="#"]', e.target).attr('href'));
+        });
+
         $('#navbar a').on('click', function (event) {
 
             console.log(event);

@@ -6,7 +6,7 @@ import {
 import { IPagePart } from './page-about-me.types';
 import { PageAboutMeService } from './page-about-me.service';
 
-declare var $: JQueryStatic;
+let $: JQueryStatic;
 
 @Component({
     selector: 'pa-page-about-me-navigation',

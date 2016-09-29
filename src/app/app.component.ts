@@ -5,6 +5,8 @@ import {
 
 import { PageAboutMeComponent } from './pages/about-me/page-about-me.component';
 
+declare var $: JQueryStatic;
+
 @Component({
     selector: 'pa-app',
     template: '<pa-page-about-me></pa-page-about-me>',

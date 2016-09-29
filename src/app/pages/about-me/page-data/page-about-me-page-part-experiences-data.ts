@@ -15,8 +15,19 @@ export const pagePartExperiencesData: IPagePartExperiencesData = {
     careersHeader: 'Careers',
     careers: [
         {
+            company: 'isone.tech',
+            period: 'May 2016 – Present',
+            position: 'Front-end Developer',
+            // siteUrl: 'https://imanagerent.com/',
+            role: `
+                Angular2+TypeScript web development. 
+                Other used libraries and technologies: Leaflet 
+                (JavaScript library for interactive maps), Canvas, SVG, JS Typed Arrays, 
+                Web Workers, Node.js, TSLint, Gulp, SystemJS, Karma, Bootstrap.`
+        },
+        {
             company: 'iManageRent - Property management system',
-            period: 'March 2011 – April 2015',
+            period: 'March 2011 – Present',
             position: 'Web Developer',
             siteUrl: 'https://imanagerent.com/',
             role: 'Web development (PHP, JavaScript, MySQL, jQuery, Silex, Twig, third-party APIs)'

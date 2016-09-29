@@ -62,7 +62,7 @@ export const pagePartAbilitiesData: IPagePartAbilitiesData = {
             ],
             projectInfo: {
                 description: 'This project is build using AngularJS 2, TypeScript, ' +
-                'Twitter Bootstrap, jQuery and run on Node.js server.',
+                'Twitter Bootstrap, jQuery, Webpack and run on Node.js server.',
                 url: 'https://github.com/ProkofyevAlexander/personal-page',
                 btnText: 'See project on GitHub'
             }

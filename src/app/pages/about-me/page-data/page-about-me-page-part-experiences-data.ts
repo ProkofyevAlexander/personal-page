@@ -40,7 +40,7 @@ export const pagePartExperiencesData: IPagePartExperiencesData = {
             role: 'Hardware development (VHDL). Web development (PHP, JavaScript, HTML, CSS, XML, XSLT).'
         },
         {
-            company: 'nosis Project System',
+            company: 'Gnosis Project System',
             period: 'June 2007 – September 2008',
             position: 'Web Developer',
             role: 'Project System support and functionality extension (Perl, MySQL, JavaScript, XML, HTML, CSS, DOM)'

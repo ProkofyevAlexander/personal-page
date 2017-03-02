@@ -60,6 +60,7 @@
     "webpack": "2.1.0-beta.20"
   },
   "scripts": {
+    "start": "npm run serve",
     "build": "gulp",
     "postinstall": "node_modules/.bin/typings install",
     "serve": "gulp serve",

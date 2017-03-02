@@ -17,13 +17,13 @@ module.exports = {
 
         loaders: [
             {
-                test: /.json$/,
+                test: /\.json$/,
                 loaders: [
                     'json'
                 ]
             },
             {
-                test: /.pug$/,
+                test: /\.pug$/,
                 loaders: [
                     'pug-html'
                 ]
@@ -59,7 +59,7 @@ module.exports = {
                 ]
             },
             {
-                test: /.html$/,
+                test: /\.html$/,
                 loaders: [
                     'html'
                 ]

@@ -5,12 +5,10 @@ import {
     ElementRef
 } from '@angular/core';
 
-declare var $: JQueryStatic;
-
 @Component({
     selector: 'pa-page-about-me-head',
     template: require('./page-about-me__head.pug'),
-    styles: [require('./page-about-me__head.scss')]
+    styleUrls: ['./page-about-me__head.scss']
 })
 export class PageAboutMeHeadComponent implements AfterViewInit {
 

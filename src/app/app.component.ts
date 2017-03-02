@@ -3,14 +3,11 @@ import {
     AfterViewInit
 } from '@angular/core';
 
-import { PageAboutMeComponent } from './pages/about-me/page-about-me.component';
-
-declare var $: JQueryStatic;
+require('../../assets/scss/layout.scss');
 
 @Component({
     selector: 'pa-app',
-    template: '<pa-page-about-me></pa-page-about-me>',
-    directives: [PageAboutMeComponent]
+    template: '<pa-page-about-me></pa-page-about-me>'
 })
 export class AppComponent implements AfterViewInit {
 

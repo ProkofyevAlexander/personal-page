@@ -6,12 +6,10 @@ import {
 import { IPagePart } from './page-about-me.types';
 import { PageAboutMeService } from './page-about-me.service';
 
-declare var $: JQueryStatic;
-
 @Component({
     selector: 'pa-page-about-me-navigation',
     template: require('./page-about-me__navigation.pug'),
-    styles: [require('./page-about-me__navigation.scss')]
+    styleUrls: ['./page-about-me__navigation.scss']
 })
 export class PageAboutMeNavigationComponent implements AfterViewInit {
 

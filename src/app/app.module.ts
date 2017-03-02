@@ -4,7 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PageAboutMeService } from './pages/about-me/page-about-me.service';
 
-import { PAGES_ENTRY_COMPONENTS } from './pages/index';
+import {
+    PA_COMPONENTS,
+    PA_ENTRY_COMPONENTS
+} from './pages';
 
 @NgModule({
     providers: [
@@ -13,10 +16,10 @@ import { PAGES_ENTRY_COMPONENTS } from './pages/index';
     imports: [BrowserModule],
     declarations: [
         AppComponent,
-        PAGES_ENTRY_COMPONENTS
+        PA_COMPONENTS
     ],
     bootstrap: [AppComponent],
-    entryComponents: PAGES_ENTRY_COMPONENTS
+    entryComponents: PA_ENTRY_COMPONENTS
 })
 export class AppModule {
 }

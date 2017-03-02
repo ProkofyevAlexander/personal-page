@@ -50,8 +50,17 @@ div&attributes({
                             a(target="_blank")&attributes({
                                 '*ngIf': 'career.siteUrl',
                                 '[attr.href]': 'career.siteUrl'
-                            }) {{ career.siteUrl }}
+                            }) {{ career.siteUrlText ? career.siteUrlText : career.siteUrl }}
                             br&attributes({
                                 '*ngIf': 'career.siteUrl'
                             })
                             | {{ career.role }}
+                            ul&attributes({
+                                '*ngIf': 'career.sites && career.sites.length'
+                            })
+                                li&attributes({
+                                    '*ngFor': 'let site of career.sites'
+                                })
+                                    a&attributes({
+                                        '[attr.href]': 'site.url'
+                                    }) {{ site.text }} - {{ site.urlText }}

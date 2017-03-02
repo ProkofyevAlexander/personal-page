@@ -39,7 +39,13 @@ export interface IPagePartExperiencesData {
         period: string;
         position: string;
         siteUrl?: string;
+        siteUrlText?: string;
         role: string;
+        sites?: {
+            text: string;
+            urlText: string;
+            url: string;
+        }[];
     }[];
 }
 

@@ -17,18 +17,18 @@ export const pagePartExperiencesData: IPagePartExperiencesData = {
         {
             company: 'isone.tech',
             period: 'May 2016 – Present',
-            position: 'Front-end Developer',
+            position: 'Front-end developer',
             // siteUrl: 'https://imanagerent.com/',
             role: `
-                Angular2+TypeScript web development. 
-                Other used libraries and technologies: Leaflet 
-                (JavaScript library for interactive maps), Canvas, SVG, JS Typed Arrays, 
-                Web Workers, Node.js, TSLint, Gulp, SystemJS, Karma, Bootstrap.`
+                Angular2+TypeScript development. 
+                Other used libraries and technologies: Leaflet, Mapbox GL JS, 
+                Canvas API, Web Workers API, JS Typed Arrays, SVG, Node.js, TSLint,
+                Gulp, SystemJS, Karma, Twitter Bootstrap.`
         },
         {
             company: 'iManageRent - Property management system',
             period: 'March 2011 – Present',
-            position: 'Web Developer',
+            position: 'Full-stack developer',
             siteUrl: 'https://imanagerent.com/',
             role: 'Web development (PHP, JavaScript, MySQL, jQuery, Silex, Twig, third-party APIs)'
         },
@@ -42,8 +42,28 @@ export const pagePartExperiencesData: IPagePartExperiencesData = {
         {
             company: 'Gnosis Project System',
             period: 'June 2007 – September 2008',
-            position: 'Web Developer',
-            role: 'Project System support and functionality extension (Perl, MySQL, JavaScript, XML, HTML, CSS, DOM)'
+            position: 'Full-stack Developer',
+            siteUrlText: 'http:/www.gnosistools.com/',
+            siteUrl: 'https://web.archive.org/web/20140711182750/http:/www.gnosistools.com/',
+            role: 'Project System support and functionality extension (Perl, MySQL, JavaScript, XML, HTML, CSS, jQuery)'
+        },
+        {
+            company: 'Own CMS',
+            period: '2005 - 2009',
+            position: 'Full-stack Developer',
+            role: '	Architecture design and development (PHP, MySQL, JavaScript, HTML, CSS)',
+            sites: [
+                {
+                    text: 'Unofficial site of specialty',
+                    urlText: '2301.ru',
+                    url: 'https://web.archive.org/web/20060506080348/http:/2301.ru/',
+                },
+                {
+                    text: 'Official site of the facility',
+                    urlText: 'fit.vlsu.ru',
+                    url: 'https://web.archive.org/web/20080302034002/http:/www.fit.vlsu.ru/',
+                }
+            ]
         }
     ]
 };

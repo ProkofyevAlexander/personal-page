@@ -8,31 +8,27 @@ export const pagePartAbilitiesData: IPagePartAbilitiesData = {
             header: 'Skills',
             listItems: [
                 {
-                    title: 'PHP',
-                    score: 5
-                },
-                {
                     title: 'JavaScript',
                     score: 5
                 },
                 {
-                    title: 'MySQL',
+                    title: 'TypeScript',
+                    score: 5
+                },
+                {
+                    title: 'DOM, BOM',
                     score: 4
                 },
                 {
-                    title: 'HTML (5)',
+                    title: 'HTML',
                     score: 4
                 },
                 {
-                    title: 'CSS (3)',
-                    score: 4
-                },
-                {
-                    title: 'Node.js',
+                    title: 'CSS',
                     score: 3
                 },
                 {
-                    title: 'TypeScript',
+                    title: 'Node.js',
                     score: 4
                 },
                 {
@@ -41,6 +37,18 @@ export const pagePartAbilitiesData: IPagePartAbilitiesData = {
                 },
                 {
                     title: 'jQuery',
+                    score: 4
+                },
+                {
+                    title: 'Express (framework for Node.js)',
+                    score: 3
+                },
+                {
+                    title: 'PHP',
+                    score: 5
+                },
+                {
+                    title: 'MySQL',
                     score: 4
                 },
                 {
@@ -54,10 +62,6 @@ export const pagePartAbilitiesData: IPagePartAbilitiesData = {
                 {
                     title: 'Laravel (PHP framework)',
                     score: 2
-                },
-                {
-                    title: 'Express (framework for Node.js)',
-                    score: 3
                 }
             ],
             projectInfo: {
@@ -88,11 +92,11 @@ export const pagePartAbilitiesData: IPagePartAbilitiesData = {
                     score: 5
                 },
                 {
-                    title: 'SVN',
+                    title: 'Git',
                     score: 4
                 },
                 {
-                    title: 'Git',
+                    title: 'SVN',
                     score: 4
                 },
                 {

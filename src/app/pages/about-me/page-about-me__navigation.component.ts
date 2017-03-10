@@ -8,7 +8,7 @@ import { PageAboutMeService } from './page-about-me.service';
 
 @Component({
     selector: 'pa-page-about-me-navigation',
-    template: require('./page-about-me__navigation.pug'),
+    templateUrl: './page-about-me__navigation.pug',
     styleUrls: ['./page-about-me__navigation.scss']
 })
 export class PageAboutMeNavigationComponent implements AfterViewInit {

@@ -4,7 +4,7 @@ import { PageAboutMeContentItemBase } from './page-about-me__content-item-base';
 
 @Component({
     selector: 'pa-page-about-me-content-item-abilities',
-    template: require('./page-about-me__content-item-contact.pug'),
+    templateUrl: './page-about-me__content-item-contact.pug',
     styleUrls: [
         './page-about-me__content-item.scss',
         './page-about-me__content-item-contact.scss'

@@ -7,6 +7,12 @@ let helpers = require('./helpers');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
+
+    entry: {
+        'app': './compiled/main.aot.ts',
+        'vendor': './compiled/vendor.ts'
+    },
+
     devtool: 'source-map',
 
     output: {

@@ -5,7 +5,7 @@ import { IPagePartProfileData } from '../page-about-me.types';
 
 @Component({
     selector: 'pa-page-about-me-content-item-profile',
-    template: require('./page-about-me__content-item-profile.pug'),
+    templateUrl: './page-about-me__content-item-profile.pug',
     styleUrls: [
         './page-about-me__content-item.scss',
         './page-about-me__content-item-profile.scss'

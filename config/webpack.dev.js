@@ -1,9 +1,15 @@
 let webpackMerge = require('webpack-merge');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let commonConfig = require('./webpack.common.js');
 let helpers = require('./helpers');
 
-module.exports = webpackMerge(commonConfig, {
+let temp = webpackMerge(commonConfig, {
+
+    entry: {
+        'app': './src/main.ts'
+    },
+
     devtool: 'cheap-module-eval-source-map',
 
     output: {
@@ -14,6 +20,11 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     plugins: [
+
+        new HtmlWebpackPlugin({
+            template: 'src/index.pug'
+        }),
+
         new ExtractTextPlugin('[name].css')
     ],
 
@@ -22,3 +33,7 @@ module.exports = webpackMerge(commonConfig, {
         stats: 'minimal'
     }
 });
+
+console.log(temp);
+
+module.exports = temp;

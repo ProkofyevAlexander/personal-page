@@ -8,7 +8,7 @@ import {
 
 @Component({
     selector: 'pa-page-about-me-content-item-abilities',
-    template: require('./page-about-me__content-item-abilities.pug'),
+    templateUrl: './page-about-me__content-item-abilities.pug',
     styleUrls: [
         './page-about-me__content-item.scss',
         './page-about-me__content-item-abilities.scss'

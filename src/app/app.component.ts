@@ -3,11 +3,11 @@ import {
     AfterViewInit
 } from '@angular/core';
 
-require('../../assets/scss/layout.scss');
+import '../../assets/scss/layout.scss';
 
 @Component({
     selector: 'pa-app',
-    template: '<pa-page-about-me></pa-page-about-me>'
+    templateUrl: './app.component.pug'
 })
 export class AppComponent implements AfterViewInit {
 

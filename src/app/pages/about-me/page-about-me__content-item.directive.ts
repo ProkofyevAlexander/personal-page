@@ -7,14 +7,12 @@ import {
 } from '@angular/core';
 
 import { IPagePart, PagePartType } from './page-about-me.types';
+import { IPageAboutMeContentItem } from './content-items/page-about-me__content-item.interface';
+import { PageAboutMeContentItemExperiencesComponent } from './content-items/page-about-me__content-item-experiences.component';
+import { PageAboutMeContentItemAbilitiesComponent } from './content-items/page-about-me__content-item-abilities.component';
+import { PageAboutMeContentItemContactComponent } from './content-items/page-about-me__content-item-contact.component';
+import { PageAboutMeContentItemProfileComponent } from './content-items/page-about-me__content-item-profile.component';
 
-import {
-    IPageAboutMeContentItem,
-    PageAboutMeContentItemProfileComponent,
-    PageAboutMeContentItemExperiencesComponent,
-    PageAboutMeContentItemAbilitiesComponent,
-    PageAboutMeContentItemContactComponent
-} from './content-items/index';
 
 @Directive({
     selector: '[paPageAboutMeContentItem]'

@@ -7,7 +7,7 @@ import {
 
 @Component({
     selector: 'pa-page-about-me-head',
-    template: require('./page-about-me__head.pug'),
+    templateUrl: './page-about-me__head.pug',
     styleUrls: ['./page-about-me__head.scss']
 })
 export class PageAboutMeHeadComponent implements AfterViewInit {

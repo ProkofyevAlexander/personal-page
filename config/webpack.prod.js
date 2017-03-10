@@ -1,4 +1,5 @@
 let webpack = require('webpack');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 let webpackMerge = require('webpack-merge');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let commonConfig = require('./webpack.common.js');
@@ -23,6 +24,19 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     plugins: [
+
+        // Workaround for angular/angular#11580
+        new webpack.ContextReplacementPlugin(
+            // The (\\|\/) piece accounts for path separators in *nix and Windows
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            helpers.root('./compiled'), // location of your src
+            {} // a map of your routes
+        ),
+
+        new HtmlWebpackPlugin({
+            template: 'compiled/index.html'
+        }),
+
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             mangle: {

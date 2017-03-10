@@ -1,3 +1,4 @@
+let webpack = require('webpack');
 let webpackMerge = require('webpack-merge');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -7,7 +8,8 @@ let helpers = require('./helpers');
 let temp = webpackMerge(commonConfig, {
 
     entry: {
-        'app': './src/main.ts'
+        'app': './src/main.ts',
+        'vendor': './src/vendor.ts'
     },
 
     devtool: 'cheap-module-eval-source-map',
@@ -20,6 +22,14 @@ let temp = webpackMerge(commonConfig, {
     },
 
     plugins: [
+
+        // Workaround for angular/angular#11580
+        new webpack.ContextReplacementPlugin(
+            // The (\\|\/) piece accounts for path separators in *nix and Windows
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            helpers.root('./src'), // location of your src
+            {} // a map of your routes
+        ),
 
         new HtmlWebpackPlugin({
             template: 'src/index.pug'

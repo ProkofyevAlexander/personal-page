@@ -1,12 +1,10 @@
 let webpack = require('webpack');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let helpers = require('./helpers');
-let path = require('path');
 
 module.exports = {
     entry: {
-        'polyfills': './src/polyfills.ts',
-        'vendor': './src/vendor.ts'
+        'polyfills': './src/polyfills.ts'
     },
 
     resolve: {
@@ -62,14 +60,6 @@ module.exports = {
     },
 
     plugins: [
-
-        // Workaround for angular/angular#11580
-        new webpack.ContextReplacementPlugin(
-            // The (\\|\/) piece accounts for path separators in *nix and Windows
-            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-            helpers.root('./src'), // location of your src
-            {} // a map of your routes
-        ),
 
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']

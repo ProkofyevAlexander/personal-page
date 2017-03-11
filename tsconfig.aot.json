@@ -10,13 +10,15 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
   },
-
   "files": [
     "compiled/app/app.module.ts",
     "compiled/main.ts"
   ],
-
   "angularCompilerOptions": {
     "skipMetadataEmit" : true
-  }
+  },
+  "exclude": [
+    "src",
+    "node_modules"
+  ]
 }

@@ -13,5 +13,10 @@
   },
   "awesomeTypescriptLoaderOptions": {
     "silent": true
-  }
+  },
+  "exclude": [
+    "src/main.aot.ts",
+    "compiled",
+    "node_modules"
+  ]
 }

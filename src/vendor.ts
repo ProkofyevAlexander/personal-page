@@ -8,7 +8,6 @@ import '@angular/common';
 import 'rxjs';
 
 import 'jquery';
-import 'bootstrap';
 import 'bootstrap/js/scrollspy.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-theme.min.css';

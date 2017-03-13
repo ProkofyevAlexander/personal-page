@@ -21,6 +21,8 @@ export class PageAboutMeNavigationComponent implements AfterViewInit {
 
     ngAfterViewInit() {
 
+        let $body = $('html, body');
+
         $('body').scrollspy({ target: '#navbar' });
 
         window.addEventListener('scroll', () => {
@@ -31,9 +33,7 @@ export class PageAboutMeNavigationComponent implements AfterViewInit {
             history.replaceState(null, null, $('a[href^="#"]', e.target).attr('href'));
         });
 
-        $('#navbar a').on('click', function (event) {
-
-            console.log(event);
+        $('#navbar').on('click', 'a', function (event) {
 
             if (this.hash !== '') {
 
@@ -41,7 +41,7 @@ export class PageAboutMeNavigationComponent implements AfterViewInit {
 
                 const hash: string = this.hash;
 
-                $('html, body').animate({
+                $body.animate({
                     scrollTop: $(hash).offset().top
                 }, 300, () => {
                     window.location.hash = hash;

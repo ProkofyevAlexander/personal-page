@@ -33,6 +33,6 @@ export class PageAboutMeHeadComponent implements AfterViewInit {
 
     scrollToNav(event: MouseEvent) {
         event.preventDefault();
-        $('#navbar a').eq(0).click();
+        $('#navbar').find('a').eq(0).click();
     }
 }
